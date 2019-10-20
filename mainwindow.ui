@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>955</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lancer l'ordonnancement</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>161</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Politique d'ordannancement</string>
+    </property>
+    <widget class="QRadioButton" name="fifo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>FIFO</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="sjf">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>SJF</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rr">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RR</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="quantum">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>80</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="msg">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Nombre de processus:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="nbprocess"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Liste des processus</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ordonnancement</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>50</y>
+      <width>691</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QTableWidget" name="tableWidget">
+       <row>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Processus</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Date d'arrivée</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Temps d'éxécution</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="result">
+       <row>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>11</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>12</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>13</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>14</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>15</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>16</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>17</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>18</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>19</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>20</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>21</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>22</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>23</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>24</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>25</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>26</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>27</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>28</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>29</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>30</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>31</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>32</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>33</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>34</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>35</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>36</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>37</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>38</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>39</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>40</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Processus</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Date d'allocation</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Durée Restante</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>955</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOrdonnancement">
+    <property name="title">
+     <string>Ordonnancement</string>
+    </property>
+   </widget>
+   <addaction name="menuOrdonnancement"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
